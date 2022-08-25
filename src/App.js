@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { Box, createTheme, ThemeProvider } from '@mui/material';
+import MainComponent from './views';
+import { getDesignTokens } from './theme';
+import { createContext, useState } from 'react';
+import CssBaseline from "@mui/material/CssBaseline";
+import './styles.css';
 
-function App() {
+export const ThemeContext = createContext();
+
+export default function App() {
+  const [mode, setMode] = useState('light');
+  const toggleMode = () => {
+    mode === 'light' ? setMode('dark') : setMode('light');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={{ mode, toggleMode }}>
+      <ThemeProvider theme={createTheme(getDesignTokens(mode))}>
+        <CssBaseline />
+        <Box>
+          <MainComponent />
+        </Box>
+      </ThemeProvider>
+    </ThemeContext.Provider>
   );
 }
-
-export default App;

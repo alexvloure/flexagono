@@ -32,8 +32,8 @@ const MainComponent = () => {
           <Box ref={contact} className="section" sx={{ minHeight: '70vh'}}>
             <Contact />
           </Box>
-          <Box sx={{ backgroundColor: '#E6E1E0', width: '100%' }}>
-          <Footer />
+          <Box className="footer" sx={{backgroundColor: '#E6E1E0'}}>
+            <Footer />
           </Box>
         </Box>
       )}

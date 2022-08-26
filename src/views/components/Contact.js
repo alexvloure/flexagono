@@ -4,6 +4,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 const Contact = () => {
   return (
@@ -28,7 +29,7 @@ const Contact = () => {
             flexDirection: { xs: 'column', md: 'row' },
             justifyContent: 'center',
             width: '100%',
-            height: { xs: '80vh', md: '500px' },
+            height: { xs: '100vh', md: '500px' },
             // borderRadius: '2%',
           }}>
           <Box
@@ -98,6 +99,10 @@ const Contact = () => {
                   rel="noreferrer">
                   Rúa Faxón, 24 - Val do Dubra - 15873
                 </a>
+              </Box>
+              <Box sx={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
+                <CalendarMonthIcon />
+                <Typography>Lunes - Viernes de 15:00h a 22:00h</Typography>
               </Box>
             </Box>
           </Box>

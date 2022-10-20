@@ -50,7 +50,7 @@ const Pricing = () => {
           flexDirection: 'column',
           alignItems: 'center',
           width: '100%',
-          height: {xs: '100%d', md: '60vh'},
+          height: {xs: '100%', md: '60vh'},
         }}>
         <Typography variant="h4" sx={{ textAlign: 'center', mb: '5%', fontWeight: '500' }}>
           Tarifas

@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Footer from './components/Footer';
+import Methodology from './components/Methodology';
 
 const MainComponent = () => {
   const aboutMe = useRef(null);
@@ -25,6 +26,9 @@ const MainComponent = () => {
           <Navbar aboutMeRef={aboutMe} pricingRef={pricing} contactRef={contact} toggleMode={toggleMode} />
           <Box ref={aboutMe} className="section">
             <AboutMe mode={mode} />
+          </Box>
+          <Box className="section" sx={{ minHeight: '80vh'}}>
+            <Methodology />
           </Box>
           <Box ref={pricing} className="section" sx={{ minHeight: '80vh', scrollMarginTop: {xs: '120px', md: '200px'}}}>
             <Pricing />

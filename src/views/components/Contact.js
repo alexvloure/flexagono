@@ -3,7 +3,6 @@ import { Box, Typography } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 const Contact = () => {
@@ -13,8 +12,8 @@ const Contact = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: {xs: '100px', md: '0'},
-        marginBottom: {xs: '25px', md: '0'}
+        marginTop: { xs: '100px', md: '0' },
+        marginBottom: { xs: '25px', md: '0' },
       }}>
       <Box
         sx={{
@@ -49,7 +48,7 @@ const Contact = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 gap: '40px',
-                marginBottom: {xs: '25px', md: '0'},
+                marginBottom: { xs: '25px', md: '0' },
               }}>
               <Typography
                 variant="h5"
@@ -61,23 +60,16 @@ const Contact = () => {
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
                 <EmailIcon />
-                <a style={{color: 'black', textDecoration: 'none'}} href="mailto:academiaflexagono@gmail.com">
+                <a
+                  style={{ color: 'black', textDecoration: 'none' }}
+                  href="mailto:academiaflexagono@gmail.com">
                   academiaflexagono@gmail.com
                 </a>
               </Box>
-              <Box sx={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
-                <InstagramIcon />
-                <a
-                  target="_blank"
-                  style={{
-                    color: 'black',
-                    textDecorationColor: 'black',
-                  }}
-                  href="https://www.instagram.com/academiaflexagono"
-                  rel="noreferrer">
-                  @academiaflexagono
-                </a>
+              {/* <Box sx={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
               </Box>
+              <Box sx={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
+              </Box> */}
               <Box sx={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
                 <LocalPhoneIcon />
                 <a
@@ -103,6 +95,30 @@ const Contact = () => {
               <Box sx={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
                 <CalendarMonthIcon />
                 <Typography>Lunes - Viernes de 15:00h a 22:00h</Typography>
+              </Box>
+              <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', maxWidth: '50%', mx: 'auto', gap: '50px' }}>
+                <a
+                  target="_blank"
+                  style={{
+                    color: 'black',
+                    textDecorationColor: 'black',
+                  }}
+                  href="https://www.instagram.com/academiaflexagono"
+                  rel="noreferrer">
+                  {/* <InstagramIcon sx={{ transform: 'scale(1.25)'}} /> */}
+                  <i class="fa fa-instagram fa-2x"></i>
+                </a>
+                <a
+                  target="_blank"
+                  style={{
+                    color: 'black',
+                    textDecorationColor: 'black',
+                  }}
+                  href="https://www.facebook.com/profile.php?id=100086456030752"
+                  rel="noreferrer">
+                  {/* <FacebookIcon /> */}
+                  <i class="fa fa-facebook-square fa-2x"></i>
+                </a>
               </Box>
             </Box>
           </Box>

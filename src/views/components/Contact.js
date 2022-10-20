@@ -51,7 +51,7 @@ const Contact = () => {
                 marginBottom: { xs: '25px', md: '0' },
               }}>
               <Typography
-                variant="h5"
+                variant="h4"
                 sx={{ textAlign: 'center', mb: '2%', fontWeight: '500' }}>
                 Contacto
               </Typography>

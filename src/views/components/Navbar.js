@@ -13,11 +13,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import EuroIcon from '@mui/icons-material/Euro';
 import CallIcon from '@mui/icons-material/Call';
+import SchoolIcon from '@mui/icons-material/School';
 import logoFlexagono from '../../images/Logo-02.png';
 
-const pages = ['Tarifas', 'Contacto'];
+const pages = ['Metodología', 'Tarifas', 'Contacto'];
 
-const Navbar = ({ aboutMeRef, pricingRef, contactRef, toggleMode }) => {
+const Navbar = ({ aboutMeRef, methodologyRef, pricingRef, contactRef, toggleMode }) => {
   const [open, setOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
 
@@ -57,6 +58,11 @@ const Navbar = ({ aboutMeRef, pricingRef, contactRef, toggleMode }) => {
 
   const handleScrollTo = (e) => {
     switch (e.target.innerText) {
+      case 'Metodología':
+        setTimeout(() => {
+          methodologyRef.current.scrollIntoView();
+        }, 10);
+        break;
       case 'Tarifas':
         setTimeout(() => {
           pricingRef.current.scrollIntoView();
@@ -85,8 +91,9 @@ const Navbar = ({ aboutMeRef, pricingRef, contactRef, toggleMode }) => {
 
   const selectIconDict = {
     0: <HomeIcon />,
-    1: <EuroIcon />,
-    2: <CallIcon />,
+    1: <SchoolIcon />,
+    2: <EuroIcon />,
+    3: <CallIcon />,
   };
 
   const SideList = (side) => (
@@ -96,7 +103,7 @@ const Navbar = ({ aboutMeRef, pricingRef, contactRef, toggleMode }) => {
       onClick={() => handleCloseDrawer()}
       onKeyDown={() => handleCloseDrawer()}>
       <List>
-        {['Inicio', 'Tarifas', 'Contacto'].map((text, index) => (
+        {['Inicio', 'Metodología', 'Tarifas', 'Contacto'].map((text, index) => (
           <ListItem button key={text} onClick={(e) => handleScrollTo(e)}>
             <ListItemIcon>{selectIconDict[index]}</ListItemIcon>
             <ListItemText primary={text} />

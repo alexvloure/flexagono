@@ -106,7 +106,7 @@ const Contact = () => {
                   href="https://www.instagram.com/academiaflexagono"
                   rel="noreferrer">
                   {/* <InstagramIcon sx={{ transform: 'scale(1.25)'}} /> */}
-                  <i class="fa fa-instagram fa-2x"></i>
+                  <i className="fa fa-instagram fa-2x"></i>
                 </a>
                 <a
                   target="_blank"
@@ -117,7 +117,7 @@ const Contact = () => {
                   href="https://www.facebook.com/profile.php?id=100086456030752"
                   rel="noreferrer">
                   {/* <FacebookIcon /> */}
-                  <i class="fa fa-facebook-square fa-2x"></i>
+                  <i className="fa fa-facebook-square fa-2x"></i>
                 </a>
               </Box>
             </Box>
